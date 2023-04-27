@@ -768,6 +768,11 @@ for (let i = 0; i < irregularVerb.length; i++){
 
 
 
+
+
+
+
+
 var cards = document.querySelectorAll(".carta");
 
   cards.forEach((card) => {

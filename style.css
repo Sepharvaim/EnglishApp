@@ -8,11 +8,6 @@ body {
 	box-sizing: border-box;
 }
 
-body {
-	font-family: Arial, sans-serif;
-	width: 100%;
-	min-height: 100vh;
-}
 
 header {
 	background-color: #333;
@@ -48,27 +43,36 @@ h2 {
 	margin-bottom: 20px;
 }
 
+
+
+
+
+.carte2,
 .carte {
+
 	padding-top: 10px;
 	padding-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
+	flex-shrink: 1;
 	perspective: 6000px;
 	border: 1px solid black;
 	justify-content: space-around;
 	background-color: #e5e6e8;
+	flex-shrink: 3;
 
 }
 
 .carta {
-	width: 200px;
+	/* width: 200px; */
 	height: 270px;
+	flex-basis: 1;
 	margin: 7px;
 	position: relative;
 	transition: transform 1500ms;
 	backface-visibility: hidden;
 	transform-style: preserve-3d;
-	
+	flex-basis: calc(100% / 2 - 20px);
 	
 }
 
@@ -77,25 +81,25 @@ h2 {
 }
 .back,
 .front {
-	/* border-radius: 20px; */
-	
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	backface-visibility: hidden;
-	
-
-	/* margin: 5px 5px;
-	padding: 5px 5px; */
 }
-.front {
+
+
+
+
+
+
+
+
+.front {  /* il fronte della carta viene impostato flex cosi da mettere il p allinterno centrato */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
 	background-image: url('back of a card.png');
 	background-size: 100%;
-	background-repeat: no-repeat;
 
 }
 .front p {
