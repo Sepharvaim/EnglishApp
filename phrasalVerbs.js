@@ -39,3 +39,10 @@ for (const g in tonguePhrasalVerb){
   x.innerHTML = y;
   listaDiCarte2.appendChild(x)
 }
+
+
+
+
+// to come into your own 
+// to hit the mark 
+// to be down in the dumps 

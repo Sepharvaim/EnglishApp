@@ -811,3 +811,29 @@ const irregularVerbList = `be, become, begin, blow, break,bring, build,burst, bu
 
 
        
+
+
+
+
+
+       const riduciEspandiBtn = document.getElementById("riduci-espandi");
+const contenitoreCarte = document.querySelector(".carte");
+
+
+riduciEspandiBtn.addEventListener("click", () => {
+  contenitoreCarte.classList.toggle("aperto");
+  if (contenitoreCarte.classList.contains("aperto")) {
+    // contenitoreCarte.style.height = "15000px";
+ 
+    riduciEspandiBtn.textContent = "Riduci";
+  } else {
+    // contenitoreCarte.style.height = "auto";
+    
+    riduciEspandiBtn.textContent = "Espandi";
+  }
+});
+
+
+
+
+

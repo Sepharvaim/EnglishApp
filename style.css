@@ -49,19 +49,25 @@ h2 {
 
 .carte2,
 .carte {
-
+	height: 200px;
 	padding-top: 10px;
 	padding-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-shrink: 1;
-	perspective: 6000px;
+	/* perspective: 6000px; */
 	border: 1px solid black;
 	justify-content: space-around;
 	background-color: #e5e6e8;
 	flex-shrink: 3;
-
+	overflow: hidden;
+	transition: all 5s ease;
+	
 }
+.aperto {
+	transition: height 5s ease;
+	height: 12000px;
+  }
 
 .carta {
 	/* width: 200px; */
@@ -102,16 +108,13 @@ h2 {
 	background-size: 100%;
 
 }
-.front p {
-	font-size: large;
-	font-family: fantasy;
-	margin: 5px;
-}
+.front p,
 .back p {
-	font-size: large;
+	font-size: 30px;
 	font-family: fantasy;
 	margin: 5px;
 }
+
 
 
 .back {
