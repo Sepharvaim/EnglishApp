@@ -744,7 +744,7 @@ const irregularVerb = [
 
 let listaDiCarte = document.querySelector('.carte');
 
-for (let i = 0; i < irregularVerb.length; i++){
+for (let i = 0; i < 25; i++){
   let x = document.createElement('div');
   x.classList.add('carta');
 
@@ -766,6 +766,29 @@ for (let i = 0; i < irregularVerb.length; i++){
   listaDiCarte.appendChild(x)
 }
 
+let listaDiCarte2 = document.querySelector('.carte2');
+for (let i = 25; i < 50; i++){
+  let x = document.createElement('div');
+  x.classList.add('carta');
+
+  let y = `
+   <div class="front">
+   <p>
+   ${irregularVerb[i].lingue.ita}
+   </p>
+  </div>
+  <div class="back">
+    <p>${irregularVerb[i].infinitive}</p>
+    <p>${irregularVerb[i].past_simple}</p>
+    <p>${irregularVerb[i].past_participle}</p>
+    <p>${irregularVerb[i].third_person}</p>
+    <p>${irregularVerb[i].present_participle}</p>
+  </div>
+  `
+  x.innerHTML = y;
+  listaDiCarte2.appendChild(x)
+}
+
 
 
 
@@ -780,7 +803,9 @@ var cards = document.querySelectorAll(".carta");
       if (!card.classList.contains("flip")) {
         card.classList.add("flip");
         setTimeout(() => {
-          card.classList.remove("flip");
+          // card.style.display = 'none';
+          // card.classList.add("animate__slideOutRight");
+          // card.style.display = "none";
         }, 5000);
       }
     });
@@ -811,27 +836,35 @@ const irregularVerbList = `be, become, begin, blow, break,bring, build,burst, bu
 
 
        
+// questa funzione si attiva quando un bottone di espandi viene
+//  premuto la funziona passa dei parametri che identificano il pulsante cosi puo essere usata per ogni aggiuntivo pulsante 
+
+       function myFunction(x) {
+        const contenitoreCarte = document.querySelector(x);
+        let contenitoreCarteProva = document.querySelector(x).children;
+
+         contenitoreCarte.classList.toggle("aperto");
+         if(contenitoreCarte.classList.contains('aperto')) {
+           contenitoreCarte.previousElementSibling.textContent = "Riduci";
+           
+            //  for (let i = 0; i < contenitoreCarteProva.length; i++) {
+            //   contenitoreCarteProva[i].classList.remove('flip') ;
+            //  } 
+          
+         } else {
+
+          
+           contenitoreCarte.previousElementSibling.textContent = "Espandi";
+          
+          for (let i = 0; i < contenitoreCarteProva.length; i++) {
+             
+            contenitoreCarteProva[i].classList.remove('flip')
+           }
+         }
+       }
 
 
 
-
-
-       const riduciEspandiBtn = document.getElementById("riduci-espandi");
-const contenitoreCarte = document.querySelector(".carte");
-
-
-riduciEspandiBtn.addEventListener("click", () => {
-  contenitoreCarte.classList.toggle("aperto");
-  if (contenitoreCarte.classList.contains("aperto")) {
-    // contenitoreCarte.style.height = "15000px";
- 
-    riduciEspandiBtn.textContent = "Riduci";
-  } else {
-    // contenitoreCarte.style.height = "auto";
-    
-    riduciEspandiBtn.textContent = "Espandi";
-  }
-});
 
 
 

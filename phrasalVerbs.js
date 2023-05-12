@@ -17,28 +17,29 @@ const tongueIdioms = {
 
 }
 
-let listaDiCarte2 = document.querySelector('.carte2');
+// let listaDiCarte2 = document.querySelector('.carte2');
 
 
 
-for (const g in tonguePhrasalVerb){
+// for (const g in tonguePhrasalVerb){
     
-  let x = document.createElement('div');
-  x.classList.add('carta');
+//   let x = document.createElement('div');
+//   x.classList.add('carta');
 
-  let y = `
-   <div class="front">
-   <p>
-   ${tonguePhrasalVerb[g][0]}
-   </p>
-  </div>
-  <div class="back">
-    ${tonguePhrasalVerb[g][1]}
-  </div>
-  `
-  x.innerHTML = y;
-  listaDiCarte2.appendChild(x)
-}
+//   let y = `
+//    <div class="front">
+//    <p>
+//    ${tonguePhrasalVerb[g][0]}
+//    </p>
+//   </div>
+//   <div class="back">
+ 
+//     ${tonguePhrasalVerb[g][1]}
+//   </div>
+//   `
+//   x.innerHTML = y;
+//   listaDiCarte2.appendChild(x)
+// }
 
 
 
