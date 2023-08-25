@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Impara l'ingelse con l'active recall!</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		
 
-      
+<head>
+	<title>Impara l'ingelse con l'active recall!</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="styles/swiper.css">
+	<!-- swiper tag added -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
+
 <body>
 	<header>
 		<h1>Impara l'ingelse con l'active recall!</h1>
@@ -20,29 +24,93 @@
 		</nav>
 	</header>
 	<main>
-				<li><a href="#irregular_verb">Irregular Verb 1</a></li>
-				<li><a href="#tenses">Irregular Verb 2</a></li>
-				<li><a href="#grammar_rules">Irregular Verb 3</a></li>
+		<li><a href="#irregular_verb">Irregular Verb 1</a></li>
+		<li><a href="#tenses">Irregular Verb 2</a></li>
+		<li><a href="#grammar_rules">Irregular Verb 3</a></li>
+
 		<section id="irregular_verb">
+
 			<h2>Irregular verb 1</h2>
-			<button onclick="myFunction('.carte')" id="riduci-espandi">Espandi</button>
+			<!-- <button onclick="myFunction('.carte')" id="riduci-espandi">Espandi</button> -->
 			<div class="carte">
-				<!-- Aggiungi altre carte come questa -->
+
+				<!-- Slider main container -->
+				<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- If we need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+				</div>
+
+
 			</div>
 		</section>
+
 		<section id="tenses">
 			<h2>Irregular Verb 2</h2>
 			<button onclick="myFunction('.carte2')" id="riduci-espandi">Espandi</button>
 			<div class="carte2">
-				<!-- Aggiungi altre carte come questa -->
+				<div class="carta flip">
+					<div class="front">
+						<p>
+							Essere
+						</p>
+					</div>
+					<div class="back">
+						<p>be</p>
+						<p>was, were</p>
+						<p>been</p>
+						<p>is, are</p>
+						<p>being</p>
+					</div>
+				</div>
 			</div>
 		</section>
+
 		<section id="grammar_rules">
 			<!-- Aggiungi il codice HTML per la pagina 3 qui -->
 		</section>
 	</main>
-	<script src='phrasalVerbs.js'></script>
-	<script src="script.js"></script>
+
+
+	<script src="scripts/script.js"></script>
+	<script src="scripts/irregular_verb_list.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+			// Optional parameters
+			//   direction: 'vertical',
+			loop: false,
+
+
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+			// And if we need scrollbar
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		});
+	</script>
 </body>
-    
+
 </html>

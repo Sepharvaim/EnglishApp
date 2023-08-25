@@ -1,0 +1,32 @@
+.swiper {
+    width: 90%;
+    height: fit-content;
+    padding: 15px;
+
+}
+.swiper .swiper-wrapper {
+    margin: 15px;
+}
+.swiper-slide div {
+    /* width: 100%; */
+}
+
+.swiper .swiper-button-prev,.swiper .swiper-button-next {
+    color: #fff;
+}
+.swiper .swiper-pagination-bullet {
+    background: white;
+    border: 1px solid black;
+    
+}
+.swiper-scrollbar .swiper-scrollbar-horizontal {
+position: relative;
+/* margin-top: 25px; */
+}
+.swiper .swiper-pagination {
+    position: relative;
+    /* margin: 105px; */
+} 
+.swiper .swiper-scrollbar-drag {
+    
+}
